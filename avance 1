@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+
+    FILE *fichero = fopen("alcanos.txt", "r+");
+
+    char caracter;
+    while((caracter = fgetc(fichero)) != EOF){
+
+        if (caracter != '\n'){
+            printf("%c", caracter);
+        }
+
+        else{
+
+            printf("\n");
+        }
+    }
+}
